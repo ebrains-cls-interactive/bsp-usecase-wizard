@@ -40,7 +40,7 @@ jobs:
           branch: gh-pages
           folder: ${{ env.PROD_DESTINATION }}
 
-      # build this after to avoid overwritting
+      # build this after to avoid overwriting
       - name: Build Development
         run: |
           BASE_URL="/bsp-usecase-wizard/dev" \
