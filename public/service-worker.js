@@ -7,7 +7,7 @@ var periodicUpdate = [
   'bundle.js',
   'style_bundle.css',
   'global.css',
-  'https://raw.githubusercontent.com/antonelepfl/ebrains-sim-cl-dev/usecases-data/usecases-info.json',
+  'https://raw.githubusercontent.com/ebrains-cls-interactive/usecases-info/refs/heads/develop/usecases-info.json',
   'https://drive.ebrains.eu/api2/repos/',
   'https://validation.brainsimulation.eu/models',
 ];
