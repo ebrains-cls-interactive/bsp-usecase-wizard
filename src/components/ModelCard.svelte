@@ -58,18 +58,8 @@
         <div class="breadcrumbs">
           <ModelBreadcrumb modelItem={ modelItem } />
         </div>
-  
-        <div class="img-container">
-          {#each modelItem.images as image}
-            <div class="image">
-              <img
-                loading="lazy"
-                src={ image.url }
-                alt={ image.caption }
-              >
-            </div>
-          {/each}
-        </div>
+        
+
 
         <div class="text-content">
           <div class="description">{ @html sanitize(modelItem.description) }</div>
