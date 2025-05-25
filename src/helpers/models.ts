@@ -24,7 +24,7 @@ function pruneModels(modelList: Array<Model>): Array<Model> {
   return modelList
     // show placeholder if model has no images
     .map(m => {
-      if (!m.images?.length) {
+      if (m.images?.length) {
         m.images = [IMAGE_PLACEHOLDER, IMAGE_PLACEHOLDER];
       }
       return m;
