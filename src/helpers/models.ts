@@ -14,7 +14,7 @@ import { getAxiosInstance } from '@/helpers/http';
 const PYTHON3_COMPATIBLE = 'optimizations_Python3';
 
 const IMAGE_PLACEHOLDER = {
-  url: 'https://raw.githubusercontent.com/ebrains-cls-interactive/usecases-info/refs/heads/develop/images/morphology/morphology_placeholder.png',
+  url: 'https://raw.githubusercontent.com/ebrains-cls-interactive/usecases-info/refs/heads/develop/images/morphology/morphology_placeholder_01.png',
   caption: 'image placeholder'
 }
 
