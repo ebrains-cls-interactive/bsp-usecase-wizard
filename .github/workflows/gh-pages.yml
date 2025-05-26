@@ -37,7 +37,7 @@ jobs:
         if: ${{ github.ref == 'refs/heads/main' }}
         uses: JamesIves/github-pages-deploy-action@4.0.0
         with:
-          branch: gh-pages
+          branch: gh-pages-test
           folder: ${{ env.PROD_DESTINATION }}
 
       # build this after to avoid overwriting
@@ -51,6 +51,6 @@ jobs:
       - name: Deploy Development
         uses: JamesIves/github-pages-deploy-action@4.0.0
         with:
-          branch: gh-pages
+          branch: gh-pages-test
           folder: ${{ env.DEV_DESTINATION }}
           target-folder: dev
