@@ -24,7 +24,9 @@ function pruneModels(modelList: Array<Model>): Array<Model> {
   return modelList
     // show placeholder if model has no images
     .map(m => {
+      console.log("Models: ", m);
       if (!m.images?.length) {
+        console.log("Model image: ",  m.images);
         return {
           ...m,
           images: [IMAGE_PLACEHOLDER, IMAGE_PLACEHOLDER]
@@ -133,7 +135,7 @@ function fillModelUrl(placeholderUrl: string, uc: UsecaseItem) {
 
   const modelInfo = get(modelsSelected)[0];
   const modelName = modelInfo.name;
-  
+
   const modelMorphologyUrl = modelInfo?.instances.reduce((prev, instance) => {
     // this way we obtain the latest morphology available in the instances
     if (!instance.morphology) return prev;
