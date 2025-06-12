@@ -14,12 +14,12 @@
   import { goNextPage, goBackPage } from '@/helpers/pages';
   import { model as modelConstants } from '@/constants';
 
-  
+
   let modelsLoading = false;
   let fetchedModels: Array<Model> = [];
   let filteredModels: Array<Model> = [];
   let searchText = '';
-  
+
   onMount(() => {
     load()
       .catch(errorMessage.set)
@@ -68,7 +68,7 @@
     <div class="go-back-btn">
       <Icon class="material-icons" on:click={goBackPage}>keyboard_backspace</Icon>
     </div>
-    <h2 class="page-header-title">Please select the model(s)</h2>
+    <h2 class="page-header-title">Please select the model(s) from the ModelCatalog </h2>
   </div>
 
   <div class="search-container">
@@ -95,7 +95,7 @@
             ({ filteredModels.length } / { fetchedModels.length })
           </div>
         </div>
-      
+
         <div class="continue-button">
           <Button
             on:click={goNextPage}
