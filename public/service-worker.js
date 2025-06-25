@@ -9,7 +9,8 @@ var periodicUpdate = [
   'global.css',
   'https://raw.githubusercontent.com/ebrains-cls-interactive/usecases-info/refs/heads/develop/usecases-info.json',
   'https://drive.ebrains.eu/api2/repos/',
-  'https://validation.brainsimulation.eu/models',
+  // 'https://validation.brainsimulation.eu/models',
+  'https://model-validation-api.apps.ebrains.eu/models'
 ];
 
 const neverUseSW = [
