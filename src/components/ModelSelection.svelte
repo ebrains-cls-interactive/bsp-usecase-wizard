@@ -68,7 +68,7 @@
     <div class="go-back-btn">
       <Icon class="material-icons" on:click={goBackPage}>keyboard_backspace</Icon>
     </div>
-    <h2 class="page-header-title">Please select the model(s) from the ModelCatalog </h2>
+    <h2 class="page-header-title">Please select the model(s)</h2>
   </div>
 
   <div class="search-container">
