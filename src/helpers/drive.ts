@@ -8,7 +8,8 @@ import type {
 import { getAxiosInstance } from '@/helpers/http';
 
 const PROXY_BASE = drive.CORS_PROXY ? `${drive.CORS_PROXY}/` : '';
-const DRIVE_API = `${PROXY_BASE}${drive.DRIVE_API_URL}`;
+// const DRIVE_API = `${PROXY_BASE}${drive.DRIVE_API_URL}`;
+const DRIVE_API = `${drive.DRIVE_API_URL}`;
 
 const axiosInstance = getAxiosInstance();
 
@@ -50,7 +51,7 @@ export async function findItemsByCollabId(collabId: string): Promise<CollabItems
 
   return { files, folders };
 }
-    
+
 export async function createFolder(collabId: string, folderName: string) {
   if (!folderName.startsWith('/')) {
     folderName = `/${folderName}`;
