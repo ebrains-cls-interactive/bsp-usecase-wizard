@@ -10,9 +10,9 @@ function createAuthConfig() {
   const redirectBase = `${window.location.origin}/${processEnvs.baseUrl}`;
   const oidcConfig = {
     authority: iam.LOGIN_URL,
-    client_id: 'ebrains-wizard-2',
+    client_id: 'ebrains-wizard-3',
     scope: 'email profile openid collab.drive',
-    
+
     redirect_uri: `${redirectBase}/callback.html`,
     post_logout_redirect_uri: `${redirectBase}/index.html`,
     silent_redirect_uri: `${redirectBase}/silent-renew.html`,
