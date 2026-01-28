@@ -22,6 +22,9 @@ const appVersion = pjson.version || '';
 const destinationFolder = process.env.DESTINATION || 'public/build';
 const useProdOffset = process.env.USE_PROD_OFFSET || false;
 
+const ebrains_client_id = process.env.CLIENT_ID || 'ebrains-wizard-3';
+
+
 console.log('BASE_URL:', baseUrl);
 console.log('CALLBACK_URL:', callbackUrl);
 console.log('VERSION', appVersion);
@@ -30,7 +33,7 @@ console.log('USE_PROD_OFFSET', useProdOffset);
 
 function serve() {
 	let server;
-	
+
 	function toExit() {
 		if (server) server.kill(0);
 	}
@@ -100,6 +103,7 @@ export default {
 			processEnvs: JSON.stringify({
 				baseUrl,
 				appVersion,
+				ebrains_client_id,
 				isProduction: useProdOffset,
 			}),
 		}),

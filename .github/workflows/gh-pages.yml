@@ -1,13 +1,14 @@
 name: Build and Deploy to Github Pages
 
 on: [push]
-   
+
 jobs:
   CI:
     runs-on: ubuntu-latest
     env:
       DEV_DESTINATION: public/build/dev
       PROD_DESTINATION: public/build/prod
+      CLIENT_ID: ebrains-wizard-3
     steps:
       - name: Checkout
         uses: actions/checkout@v2.3.4
@@ -37,7 +38,7 @@ jobs:
         if: ${{ github.ref == 'refs/heads/main' }}
         uses: JamesIves/github-pages-deploy-action@4.0.0
         with:
-          branch: gh-pages-test
+          branch: gh-pages
           folder: ${{ env.PROD_DESTINATION }}
 
       # build this after to avoid overwriting

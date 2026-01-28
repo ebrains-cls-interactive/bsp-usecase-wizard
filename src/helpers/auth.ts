@@ -8,9 +8,11 @@ declare var processEnvs: any;
 
 function createAuthConfig() {
   const redirectBase = `${window.location.origin}/${processEnvs.baseUrl}`;
+  console.log('Redirect base', redirectBase);
+
   const oidcConfig = {
     authority: iam.LOGIN_URL,
-    client_id: 'ebrains-wizard-3',
+    client_id: `${processEnvs.ebrains_client_id}`,
     scope: 'email profile openid collab.drive',
 
     redirect_uri: `${redirectBase}/callback.html`,
