@@ -10,8 +10,10 @@ import {
 } from '@/store';
 import { usecases, drive } from '@/constants';
 
-const STATISTICS_FORM_URL = `${drive.CORS_PROXY}/${usecases.STATISTIC_URL}`;
-const IP_ENDPOINT = `${drive.CORS_PROXY}/https://checkip.amazonaws.com`;
+// const STATISTICS_FORM_URL = `${drive.CORS_PROXY}/${usecases.STATISTIC_URL}`;
+// const IP_ENDPOINT = `${drive.CORS_PROXY}/https://checkip.amazonaws.com`;
+const STATISTICS_FORM_URL = usecases.STATISTIC_URL;
+const IP_ENDPOINT = 'https://checkip.amazonaws.com';
 
 export interface StatisticDataInterface {
   category: string;
@@ -58,7 +60,7 @@ export async function sendStatistics() {
     collabId: get(collabIdSelected),
     ip: await getAnonymizedIp(),
   }
-  
+
   formData.append('entry.2065854000', data.category);
   formData.append('entry.1219332324', data.usecase);
   formData.append('entry.2088231351', data.models.toString());

@@ -7,7 +7,8 @@ import { iam } from '@/constants';
 declare var processEnvs: any;
 
 function createAuthConfig() {
-  const redirectBase = `${window.location.origin}/${processEnvs.baseUrl}`;
+  let redirectBase = `${window.location.origin}/${processEnvs.baseUrl}`;
+  if (redirectBase.endsWith('/')) redirectBase = redirectBase.slice(0, -1);
   console.log('Redirect base', redirectBase);
 
   const oidcConfig = {
